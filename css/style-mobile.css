@@ -1,0 +1,191 @@
+header {
+ height: 50px;
+}
+
+header div a {
+  font-size: 1.5rem;
+}
+
+.subtitle{
+  font-size: 4rem;
+}
+
+.float p{
+  font-size: 4rem;
+}
+
+.subscribe #title-sub{
+  font-size: 3rem;
+  width: 260px;
+  border: white 3px solid;
+}
+
+.subscribe #title-email{
+  font-size: 3rem;
+  width: 400px;
+  border-bottom: solid 5px;
+}
+
+
+.separate h1{
+  font-size: 3rem;
+}
+
+.sub_separate{
+  font-size: 2rem;
+}
+
+
+.title video {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.category-list-detail {
+  background-color: rgb(250, 250, 250);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  
+}
+
+.imgContainer, .imgContainer-beats {
+  display: flex;
+  max-width: 100%;
+  min-width: 450px;
+  flex: 0 0 auto;
+  align-items: center;
+  overflow: hidden;
+  perspective: 1px;
+}
+
+.category-list-text {
+  font-size: 3rem;
+  /* flex-basis: 100%; */
+  max-width: 100%;
+}
+
+.category-list-text-container h4 {
+  letter-spacing: 8px;
+}
+
+.category-list-text-container p {
+  font-size: 1.5rem;
+  line-height: 1.625;
+  letter-spacing: 2px;
+}
+
+.category-list-text-container span{
+  display: block;
+  padding-top: 60px;
+  letter-spacing: 10px;
+  font-size: 1.5rem;
+}
+
+.imgContainer-beats{
+  order: 0;
+}
+
+.footer-container {
+  margin-top: 30px;
+  height: 100%;
+  flex-direction: column;
+}
+
+.f_cCare,
+.f_policie,
+.f_company {
+  text-align: center;
+}
+
+footer p {
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+footer ul {
+  font-size: 2rem;
+  line-height: 2;
+ 
+}
+
+
+.f_header h1 {
+  text-align: center;
+  font-size: 6rem;
+  padding: 0;
+
+}
+
+.post{
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+}
+
+.post img{
+  width: 25%;
+  align-self: center;
+}
+
+#post-sub{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  margin: 20px;
+  font-size: 2rem;
+}
+
+#post-sub p{
+  color: rgb(172, 171, 171);
+  font-size: 2rem;
+}
+
+
+
+#sub-email{
+  width: auto;
+  align-self: center;
+  background: none;
+  border: none;
+  border-bottom: solid 3px rgb(172, 171, 171);
+  font-size: 2rem;
+}
+
+#sub{
+  font-size: 2rem;
+  margin-top: 20px;
+  width: auto;
+  text-align: center;
+  text-transform: uppercase;
+  align-self: center;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  
+}
+
+.link {
+  flex-basis: 100%;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+
+}
+
+.link input {
+  width: 40px;
+  margin-left: 20px;
+  margin-left: 20px;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 1.5rem;
+}
