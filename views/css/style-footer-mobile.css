@@ -1,0 +1,100 @@
+
+
+.footer-container {
+    margin-top: 30px;
+    height: 100%;
+    flex-direction: column;
+    width: 100vw;
+  }
+  
+  .f_cCare,
+  .f_policie,
+  .f_company {
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 2.5rem;
+  }
+  
+  footer ul {
+    font-size: 2rem;
+    line-height: 2;
+  }
+  
+  
+  .f_header h1 {
+    text-align: center;
+    font-size: 6rem;
+    padding: 0;
+  
+  }
+  
+  .post{
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+  }
+  
+  .post img{
+    width: 25%;
+    align-self: center;
+  }
+  
+  #post-sub{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    margin: 20px;
+    font-size: 2rem;
+  }
+  
+  #post-sub p{
+    color: rgb(172, 171, 171);
+    font-size: 2rem;
+  }
+  
+  
+  
+  #sub-email{
+    width: auto;
+    align-self: center;
+    background: none;
+    border: none;
+    border-bottom: solid 3px rgb(172, 171, 171);
+    font-size: 2rem;
+  }
+  
+  #sub{
+    font-size: 2rem;
+    margin-top: 20px;
+    width: auto;
+    text-align: center;
+    text-transform: uppercase;
+    align-self: center;
+    background: none;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    
+  }
+  
+  .link {
+    flex-basis: 100%;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+  
+  }
+  
+  .link input {
+    width: 40px;
+    margin-left: 20px;
+    margin-left: 20px;
+  }
+  
+  .copyright {
+    text-align: center;
+    font-size: 1.5rem;
+  }

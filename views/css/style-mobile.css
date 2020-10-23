@@ -1,0 +1,281 @@
+header {
+ height: 60px;
+}
+
+header div a {
+  font-size: 1rem;
+}
+
+header .home img{
+  width: 90px;
+}
+
+.host{
+  flex-basis: 30%;
+}
+
+.user{
+  font-size: 1.5rem;
+  flex-basis: 10%;
+}
+
+/* ------------------------ */
+#login{
+  width: 80vw;
+  height: 900px;
+}
+#login h1{
+  font-size: 3rem;
+}
+#login h2 input{
+  height: 80px;
+  width: 100px;
+  font-size: 4rem;
+}
+#login ul {
+  margin:35px 0;
+  line-height: 60px;
+  justify-content: center;
+  font-size: 3rem;
+  padding: 0;
+}
+
+#username, #password{
+  border: none;
+  width: 500px;
+  height: 80px;
+  margin-bottom: 50px;
+  border-radius: 18px;
+  font-size: 3rem; 
+}
+
+input[type=checkbox] {
+  transform: scale(3);
+  margin-right: 30px;
+}
+
+#fnlogin{
+  border-radius: 52px;
+  font-size: 3rem;
+  height: 100px;
+  width: 460px;
+}
+
+/* ------------------------ */
+
+.float #logo{
+  width: 460px;
+}
+
+.float p{
+  font-size: 2.4rem;
+}
+
+.search {
+  display: flex;
+  width: 40vw;
+  height: 500px;
+  padding-left: 20px;
+  padding-right: 20px;  
+}
+.search form input {
+  font-size: 1.5rem;
+  height: 60px;
+}
+
+.search #place {
+  margin-bottom: 20px;
+  width: 97%;
+}
+
+#arrive,#depart{
+  margin-bottom: 20px;
+  width: 97%;
+}
+
+#guests{
+  margin: 0;
+  width: 97%;
+  margin-bottom: 20px;
+}
+
+.search #title-sub {
+  margin: auto;
+  width: 100%;
+  font-size: 1.5rem;
+  height: 60px;
+}
+/* ------------------------ */
+
+.separate h1{
+  font-size: 3rem;
+}
+
+.sub_separate{
+  font-size: 2rem;
+}
+/* ------------------------ */
+
+
+.top-list {
+  flex-wrap: wrap;
+  height: 100%;
+}
+.top-list #top-container{
+  min-width: 700px;
+  min-height: 750px;
+  margin-bottom: 30px;
+}
+
+.top-list #describe {
+  font-size: 2.2rem;
+  line-height: 35px;
+}
+
+/* ------------------------ */
+
+
+.category-list-detail {
+  background-color: rgb(250, 250, 250);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  
+}
+
+.imgContainer, .imgContainer-reverse {
+  display: flex;
+  width: 100%;
+  min-width: 450px;
+  flex: 0 0 auto;
+  align-items: center;
+  overflow: hidden;
+  perspective: 1px;
+}
+
+.category-list-text {
+  font-size: 3rem;
+  max-width: 90%;
+}
+
+.category-list-text-container h4 {
+  letter-spacing: 8px;
+}
+
+.category-list-text-container p {
+  font-size: 1.5rem;
+  line-height: 1.625;
+  letter-spacing: 2px;
+}
+
+.category-list-text-container span{
+  display: block;
+  padding-top: 60px;
+  letter-spacing: 10px;
+  font-size: 1.5rem;
+}
+
+.imgContainer-reverse {
+  order: 0;
+}
+
+.footer-container {
+  margin-top: 30px;
+  height: 100%;
+  flex-direction: column;
+}
+
+.f_cCare,
+.f_policie,
+.f_company {
+  text-align: center;
+}
+
+footer p {
+  font-size: 2.5rem;
+}
+
+footer ul {
+  font-size: 2rem;
+  line-height: 2;
+ 
+}
+
+
+.f_header h1 {
+  text-align: center;
+  font-size: 6rem;
+  padding: 0;
+
+}
+
+.post{
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+}
+
+.post img{
+  width: 25%;
+  align-self: center;
+}
+
+#post-sub{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  margin: 20px;
+  font-size: 2rem;
+}
+
+#post-sub p{
+  color: rgb(172, 171, 171);
+  font-size: 2rem;
+}
+
+
+
+#sub-email{
+  width: auto;
+  align-self: center;
+  background: none;
+  border: none;
+  border-bottom: solid 3px rgb(172, 171, 171);
+  font-size: 2rem;
+}
+
+#sub{
+  font-size: 2rem;
+  margin-top: 20px;
+  width: auto;
+  text-align: center;
+  text-transform: uppercase;
+  align-self: center;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  
+}
+
+.link {
+  flex-basis: 100%;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+
+}
+
+.link input {
+  width: 40px;
+  margin-left: 20px;
+  margin-left: 20px;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 1.5rem;
+}

@@ -1,0 +1,222 @@
+.search{
+    /* display: none; */
+}
+#logo{
+    overflow: visible;
+}
+.header-container{
+    justify-content: space-around;
+}
+
+#arrive,
+#depart,
+#guests {
+  display: none;
+}
+
+#logo img {
+    width: 40px;
+}
+.search #place{
+    width: 110px;
+    font-size: 0.5rem;
+    margin: 0;
+    height: 20px;
+}
+.search #title-sub {
+    margin-left: 0;
+    font-size: 0.5rem;
+    width: 60px;
+}
+
+/* ---------------------- */
+.content{
+    flex-flow: column wrap;
+    margin: 0;
+    width: 100vw;
+}
+.left{
+    width: 95%;
+}
+
+.photo-grid{
+    flex-direction: column;
+    padding: 20;
+    min-height: 412px;
+}
+.photo-hero{
+    max-width: 100%;
+    height: 300px;
+    margin: 0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.photo-photos {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    max-width: 100%;
+    height: 212px;
+}
+
+.photo-secondary {
+    display: flex;
+    flex-direction: row;
+    margin: 4px 4px 0 0;
+    height: 100%;
+    flex-basis: 30%;
+}
+
+.photo-secondary img{
+    border-bottom-left-radius: 12px;
+}
+
+.photo-tertiary {
+    margin: 4px 4px 0 0;
+    margin-right: 0;
+}
+#tertiary-container {
+    flex-basis: calc((100% - 4px)/2);
+    overflow: hidden;
+    position: relative;
+}
+
+/* ---------------------- */
+.list-container{
+    flex-direction: column;
+}
+.map iframe{
+    border-radius: 0;
+}
+.bed-img-container{
+    flex-direction: column;
+    height: 100%;
+}
+.bed-img-container img{
+    width: 100%;
+    height: 50%;
+}
+
+.general-list{
+    flex-wrap: wrap;
+}
+
+.general-list div {
+    flex-basis: 100%;
+    margin-right: auto;
+}
+/* ---------------------- */
+
+
+.payment{
+    border-top: 1px solid #ddddde;
+    position: relative;
+    padding: 0;
+    margin-left: 10vw;
+    margin-bottom: 20px;
+    width: 80vw;
+
+}
+
+#time-select input{
+    width: 80vw;
+    padding: 0;
+}
+
+.book input{
+  width: 80vw;
+
+}
+
+
+/* ---------------------- */
+.footer-container {
+    margin-top: 30px;
+    height: 100%;
+    flex-direction: column;
+  }
+  
+  .f_cCare,
+  .f_policie,
+  .f_company {
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 1.5rem;
+  }
+  
+  footer ul {
+    font-size: 1rem;
+    line-height: 2;
+  }
+
+  
+  .post{
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+  }
+  
+  .post img{
+    width: 25%;
+    align-self: center;
+  }
+  
+  #post-sub{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    margin: 20px;
+    font-size: 1rem;
+  }
+  
+  #post-sub p{
+    color: rgb(172, 171, 171);
+    font-size: 1rem;
+  }
+  
+  
+  
+  #sub-email{
+    width: auto;
+    align-self: center;
+    background: none;
+    border: none;
+    border-bottom: solid 3px rgb(172, 171, 171);
+    font-size: 1rem;
+  }
+  
+  #sub{
+    font-size: 1rem;
+    margin-top: 20px;
+    width: auto;
+    text-align: center;
+    text-transform: uppercase;
+    align-self: center;
+    background: none;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    
+  }
+  
+  .link {
+    flex-basis: 100%;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+  
+  }
+  
+  .link input {
+    width: 40px;
+    margin-left: 20px;
+    margin-left: 20px;
+  }
+  
+  .copyright {
+    text-align: center;
+    font-size: 1rem;
+  }

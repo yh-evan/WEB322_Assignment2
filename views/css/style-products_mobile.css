@@ -1,0 +1,52 @@
+h1 {
+  font-size: 3rem;
+}
+
+
+header div a {
+  font-size: 1.5rem;
+}
+
+#arrive,
+#depart,
+#guests {
+  display: none;
+}
+
+#place {
+  height: 50px;
+  font-size: 1.2rem;
+}
+
+.search #title-sub {
+font-size: 1.5rem;
+width: 150px;
+}
+
+#logo img {
+  width: 70px;
+}
+
+.separate h1 {
+  font-size: 4rem;
+}
+
+.sub_separate {
+  font-size: 3rem;
+  padding-left: 80px;
+  font-family: "Dancing Script", cursive;
+}
+
+.top-list {
+  flex-wrap: wrap;
+}
+
+.top-list #top-container{
+  min-width: 700px;
+  min-height: 750px;
+}
+
+.top-list #describe{
+  font-size: 2.2rem;
+  line-height: 35px;
+}

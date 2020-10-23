@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>{{data.fname}}'s dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geo&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style-products.css" />
+  <link rel="stylesheet" href="./css/style-footer.css" />
+  <link rel="stylesheet" href="./css/style-dashboard.css">
+
+  <link rel="stylesheet" type="text/css" media="screen and (max-width: 1200px)"
+    href="./css/style-products_mobile.css" />
+  <link rel="stylesheet" type="text/css" media="screen and (max-width: 1200px)" href="./css/style-footer-mobile.css" />
+  <script src="https://kit.fontawesome.com/8089f34b28.js" crossorigin="anonymous"></script>
+  <style>
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+
+  <header>
+    <div class="header-container">
+      <div id="logo">
+        <a href="index.html"><img src="./img/logo.png" alt="logo"></a>
+      </div>
+      <!-- <div class="home"><a href="index.html">home</a></div> -->
+      <div class="search">
+        <form action="./list.html">
+          <input type="text" list="city" id="place" placeholder="&#xf3c5; Where would you like to go?"
+            style="font-family:Arial, FontAwesome">
+          <datalist id="city">
+            <option value="Toronto"></option>
+            <option value="Markham"></option>
+            <option value="North York"></option>
+            <option value="Scarborough"></option>
+          </datalist>
+          <input onfocus="(this.type='date')" onblur="(this.type='text')" name="arrive" id="arrive"
+            placeholder="&#xf271; Arrive" style="font-family:Arial, FontAwesome">
+          <input onfocus="(this.type='date')" onblur="(this.type='text')" name="depart" id="depart"
+            placeholder="&#xf272; Depart" style="font-family:Arial, FontAwesome">
+          <input type="text" name="guests" id="guests" placeholder="&#xf0c0; Guests"
+            style="font-family:Arial, FontAwesome">
+          <input id="title-sub" type="submit" value="&#xf002; search" style="font-family:Arial, FontAwesome">
+        </form>
+      </div>
+      <div class="all_select"><a href="./list.html">see ALL</a></div>
+    </div>
+  </header>
+
+  <div class="main">
+
+
+    <div class="separate">
+      <h1>Dear Member</h1>
+      <div class="sub_separate">
+        <p>Welcome to your personal dashboard</p>
+      </div>
+    </div>
+    <div class="profile">
+      <div id="title">
+        <p>Here is your personal information:</p>
+      </div>
+      <div class="info">
+        <div><span id="property">First Name: </span><span>{{data.fname}}</span></div>
+        <div><span id="property">Last Name: </span><span>{{data.lname}}</span></div>
+        <div><span id="property">Email: </span><span>{{data.email}}</span></div>
+        <div><span id="property">Phone Number: </span><span>{{data.phone}}</span></div>
+        <div><span id="property">Address: </span><span>{{data.address}}</span>&nbsp&nbsp<span>{{data.postal}}</span></div>
+      </div>
+    </div>
+    <div class="upload-img">
+      <img src="/photos/{{FILE_DATA.filename}}">
+    </div>
+  </div>
+
+    
+
+  <footer>
+    <div class="footer-container">
+      <div class="f_header">
+        <img id="logo" src="./img/logo.png" alt="logo">
+      </div>
+      <div class="f_cCare">
+        <p>CUSTOMER CARE</p>
+        <ul>
+          <li>Login/Register</li>
+          <li>Customer support</li>
+          <li>Find store</li>
+          <li>Shipping and return</li>
+          <li>Contact us</li>
+          <li>Covid-19 FAQ</li>
+        </ul>
+      </div>
+
+      <div class="f_policie">
+        <p>POLICIES</p>
+        <ul>
+          <li>Privacy Policy</li>
+          <li>Cookie Policy</li>
+          <li>Accessibility</li>
+          <li>Policies and terms</li>
+        </ul>
+      </div>
+
+      <div class="f_company">
+        <p>OUR COMPANY</p>
+        <ul>
+          <li>Become a Retailer</li>
+          <li>Corporate</li>
+          <li>Investors</li>
+          <li>Careers</li>
+        </ul>
+      </div>
+
+      <div class="post">
+        <form id="post-sub" action="https://formspree.io/mwkrzoer" method="post">
+          <img src="./img/mail-icon.svg" alt="">
+          <figcaption>STAY IN TOUCH</figcaption>
+          <p>Sign up for our newsletter to receive customized product news,<br> updates and special invites.</p>
+          <input type="email" name="sub-email" id="sub-email" placeholder="Email">
+          <input id="sub" type="submit" value="Subscribe">
+          <a href="register.html">Register for more information</a>
+        </form>
+      </div>
+    </div>
+
+    <div class="link">
+      <p>Find us:</p>
+      <input type="image" name="facebook" src="./img/facebook.svg"
+        onclick="window.location.href='https://www.facebook.com'" alt="facebook">
+      <input type="image" name="twitter" src="./img/twitter.svg" onclick="window.location.href='https://twitter.com/'"
+        alt="twitter">
+      <input type="image" name="youtube" src="./img/youtube.svg" onclick="window.location.href='https://youtube.com'"
+        alt="youtube">
+      <input type="image" name="instagram" src="./img/instagram.svg"
+        onclick="window.location.href='https://www.instagram.com/'" alt="instagram">
+    </div>
+
+  </footer>
+  <div class="copyright">
+    <p>Copyright © 2020 WEB322. YuhuanZhou</p>
+  </div>
+</body>
+
+</html>

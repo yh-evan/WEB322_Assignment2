@@ -1,0 +1,43 @@
+.profile{
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    line-height: 60px;
+}
+
+#title{
+    padding-left: 80px;
+}
+
+
+.info{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-bottom: 60px;
+}
+.info div{
+    display: flex;
+}
+
+
+#property{
+    display: block;
+    width: 300px;
+}
+
+.upload-img{
+    display: block;
+    margin: auto;
+    width: fit-content;
+}
+
+@media only screen and (max-width: 1200px){
+    .profile{
+        font-size: 2rem;
+    }
+    .upload-img img{
+        width: 80vw;
+        margin-bottom: 30px;
+    }
+}
