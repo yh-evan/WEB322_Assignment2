@@ -82,6 +82,7 @@ var transporter = nodemailer.createTransport({
 })
 
 // Register handlerbars as the rendering engine for views
+
 app.engine('.hbs', hbs({
     extname: '.hbs'
 }));
