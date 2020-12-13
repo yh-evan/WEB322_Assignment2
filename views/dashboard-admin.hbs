@@ -39,7 +39,34 @@
 
 
 
-  {{> page-header}}
+  <header>
+    <div class="header-container">
+      <div id="logo">
+        <a href="index.html"><img src="./img/logo.png" alt="logo"></a>
+      </div>
+      <!-- <div class="home"><a href="index.html">home</a></div> -->
+      <div class="search">
+        <form action="./list.html">
+          <input type="text" list="city" id="place" placeholder="&#xf3c5; Where would you like to go?"
+            style="font-family:Arial, FontAwesome">
+          <datalist id="city">
+            <option value="Toronto"></option>
+            <option value="Markham"></option>
+            <option value="North York"></option>
+            <option value="Scarborough"></option>
+          </datalist>
+          <input onfocus="(this.type='date')" onblur="(this.type='text')" name="arrive" id="arrive"
+            placeholder="&#xf271; Arrive" style="font-family:Arial, FontAwesome">
+          <input onfocus="(this.type='date')" onblur="(this.type='text')" name="depart" id="depart"
+            placeholder="&#xf272; Depart" style="font-family:Arial, FontAwesome">
+          <input type="text" name="guests" id="guests" placeholder="&#xf0c0; Guests"
+            style="font-family:Arial, FontAwesome">
+          <input id="title-sub" type="submit" value="&#xf002; search" style="font-family:Arial, FontAwesome">
+        </form>
+      </div>
+      <div class="all_select"><a href="./list.html">see ALL</a></div>
+    </div>
+  </header>
 
   <div class="main">
 
