@@ -96,8 +96,8 @@
       <div class="separate"></div>
       <span style="font-size: 1rem;">Room List</span>
       <div class="products_list">
-        {{#each rooms}}
         <div class="top-list">
+        {{#each rooms}}
           <div id="top-container" onclick="window.location.href='/detail{{_id}}'">
             <img src="./photos/{{thumbnail}}" alt="top1">
             <div id="describe">
@@ -113,8 +113,8 @@
               <i class="fas fa-star"></i>(26)
             </div>
           </div>
-        </div>
         {{/each}}
+        </div>
       </div>
     </div>
     <div id="logout">
