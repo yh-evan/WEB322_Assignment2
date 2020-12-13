@@ -1,0 +1,152 @@
+.filter{
+    display: flex;
+    /* border-bottom: solid 1px #f1f1f1; */
+    
+}
+
+.filter div{
+    flex: 1;
+    font: 15px "Montserrat", sans-serif;
+    display: block;
+    border: none;
+    max-width: 433.33px;
+    text-align: center;
+    border: solid 1px #f1f1f1;
+}
+
+.filter div:hover{
+    box-shadow: 0px -8px 7px 0px rgba(0, 0, 0, 0.2);
+
+}
+
+#info{
+    border-left: none;
+    cursor: pointer;
+}
+
+#info:hover, #book:hover, #host:hover{
+    border-bottom: none;
+}
+
+#book{
+    cursor: pointer;
+}
+
+#host{
+    border-right: none;
+    cursor: pointer;
+}
+
+
+.main{
+    height: 100vh;
+}
+
+
+.separate{
+    margin-bottom: 0;
+}
+
+.profile{
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    line-height: 60px;
+}
+
+#title{
+    padding-left: 80px;
+}
+#title p{
+    font-weight: bolder;
+}
+
+.welcome{
+    font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.info{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-bottom: 60px;
+}
+.info div{
+    display: flex;
+}
+
+
+#property{
+    display: block;
+    width: 300px;
+}
+
+.upload-img{
+    display: block;
+    margin: auto;
+    width: fit-content;
+}
+
+
+.memberTable{
+    font-size: 15px;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 9px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.memberTable tr{
+    border-bottom: solid 1px #f1f1f1;
+}
+
+
+
+
+#logout a{
+    font-family: "Montserrat", sans-serif;
+    height: 20px;
+    display: block;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(124, 199, 218);;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    margin: auto;
+    width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    transition: all .6s;
+}
+
+#logout a:hover{
+    background-color: rgb(60, 130, 196);
+
+}
+
+
+
+@media only screen and (max-width: 1200px){
+    .profile{
+        font-size: 2rem;
+    }
+    .upload-img img{
+        width: 80vw;
+        margin-bottom: 30px;
+    }
+
+    .filter div{
+        font-size: 2rem;
+    }
+
+    #logout a{
+        font-size: 2rem;
+        height: 40px;
+    }
+}

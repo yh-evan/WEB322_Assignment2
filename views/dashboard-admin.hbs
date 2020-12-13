@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>{{user.fname}}'s dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geo&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style-products.css" />
+  <link rel="stylesheet" href="./css/style-footer.css" />
+  <link rel="stylesheet" href="./css/style-dashboard-admin.css">
+
+  <link rel="stylesheet" type="text/css" media="screen and (max-width: 1200px)"
+    href="./css/style-products_mobile.css" />
+  <link rel="stylesheet" type="text/css" media="screen and (max-width: 1200px)" href="./css/style-footer-mobile.css" />
+  <script src="https://kit.fontawesome.com/8089f34b28.js" crossorigin="anonymous"></script>
+  <style>
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+
+  {{> header}}
+
+  <div class="main">
+
+
+    <div class="separate">
+      <h1>Dear Administrator</h1>
+      <div class="sub_separate">
+        <p>Welcome to the management dashboard</p>
+      </div>
+    </div>
+
+
+
+
+    <div id="content">
+      <div class="welcome">
+        <p>Welcome <strong style="text-transform: capitalize;">{{user.fname}}</strong>!</p>
+      </div>
+      <table class="memberTable">
+        <tr>
+          <th>Username</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th>Status</th>
+        </tr>
+        {{#each members}}
+        <tr>
+          <td>{{username}}</td>
+          <td>{{fname}}</td>
+          <td>{{lname}}</td>
+          <td>{{email}}</td>
+          {{#if phone}}
+          <td>{{phone}}</td>
+          {{else}}
+          <td>-</td>
+          {{/if}}
+          {{#if isAdmin}}
+          <td>Admin</td>
+          {{else}}
+          <td>Member</td>
+          {{/if}}
+          {{/each}}
+        </tr>
+
+      </table>
+
+      <div class="separate"></div>
+
+      <div id="logout">
+        <a href="/upload">Create Room</a>
+      </div>
+      <div class="separate"></div>
+      <span style="font-size: 1rem;">Room List</span>
+      <div class="products_list">
+        {{#each rooms}}
+        <div class="top-list">
+          <div id="top-container" onclick="window.location.href='/detail{{_id}}'">
+            <img src="./photos/{{thumbnail}}" alt="top1">
+            <div id="describe">
+              <br>
+              <span id="des-name">{{title}}<br></span>
+              <span id="des-room">Sleeps {{sleeps}} · {{bedroom}} Bedrooms · {{bathroom}} Bathrooms<br></span>
+              <span id="des-price">C$ {{price}} avg/night</span>
+              <br>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>(26)
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    <div id="logout">
+      <a href="/logout">Log out</a>
+    </div>
+  </div>
+
+
+
+  {{> footer}}
+
+</body>
+
+<script>
+  function member() {
+    var table = document.createElement('table');
+    table.className = ''
+  }
+
+</script>
+
+</html>

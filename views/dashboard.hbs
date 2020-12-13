@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>{{user.fname}}'s dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geo&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style-products.css" />
+  <link rel="stylesheet" href="./css/style-footer.css" />
+  <link rel="stylesheet" href="./css/style-dashboard.css">
+
+  <link rel="stylesheet" type="text/css" media="screen and (max-width: 1200px)"
+    href="./css/style-products_mobile.css" />
+  <link rel="stylesheet" type="text/css" media="screen and (max-width: 1200px)" href="./css/style-footer-mobile.css" />
+  <script src="https://kit.fontawesome.com/8089f34b28.js" crossorigin="anonymous"></script>
+  <style>
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+
+  {{> header}}
+
+  <div class="main">
+
+
+    <div class="separate">
+      <h1>Dear Member</h1>
+      <div class="sub_separate">
+        <p>Welcome to your personal dashboard</p>
+      </div>
+    </div>
+
+    <nav class="filter">
+      <div id="info" onclick="info()">Profile</div>
+      <div id="book">Booking</div>
+      <div id="host">Hosting</div>
+    </nav>
+
+
+
+    <div id="content">
+      <div class="welcom">
+        <p>Welcome <strong style="text-transform: capitalize;">{{user.fname}}</strong>!</p>
+      </div>
+    </div>
+    {{#if booking}}
+    <table class="memberTable">
+        <tr>
+          <th>Username</th>
+          <th>CheckIn Time</th>
+          <th>CheckOut Time</th>
+          <th>Address</th>
+          <th>Price</th>
+        </tr>
+        {{#each booking}}
+        <tr>
+          <td>{{username}}</td>
+          <td>{{checkin}}</td>
+          <td>{{checkout}}</td>
+          <td>{{address}}, {{postal}}</td>
+          <td>{{price}}</td>
+          {{/each}}
+        </tr>
+      </table>
+      {{/if}}
+      <div id="logout">
+        <a href="/logout">Log out</a>
+      </div>
+  </div>
+
+
+
+  {{> footer}}
+
+</body>
+
+<script>
+  window.onload = function(){
+    info();
+  }
+
+  function info() {
+
+    var nav = document.getElementById("info");
+    nav.style.borderBottom = "none";
+    nav.style.boxShadow = "0px -8px 7px 0px rgba(0, 0, 0, 0.2)";
+
+    var content = document.getElementById("content");
+    content.innerHTML = "";
+
+
+    var profile = document.createElement('div');
+    profile.className = "profile";
+    var title = document.createElement('div');
+    title.id = "title"
+    var subTitle = document.createElement('p');
+    subTitle.innerHTML = "Personal Info:";
+    var info = document.createElement('div');
+    info.className = "info";
+
+
+
+    content.appendChild(profile);
+    profile.appendChild(title);
+    title.appendChild(subTitle);
+
+    profile.appendChild(info);
+
+    var row1 = document.createElement('div');
+    var property1 = document.createElement('span');
+    var value1 = document.createElement('span');
+    property1.id = "property";
+    property1.innerHTML = "First Name: ";
+    value1.innerHTML = "{{user.fname}}";
+
+    info.appendChild(row1);
+    row1.appendChild(property1);
+    row1.appendChild(value1)
+
+    var row2 = document.createElement('div');
+    var property2 = document.createElement('span');
+    var value2 = document.createElement('span');
+    property2.id = "property";
+    property2.innerHTML = "Last Name: ";
+    value2.innerHTML = "{{user.lname}}";
+
+    info.appendChild(row2);
+    row2.appendChild(property2);
+    row2.appendChild(value2);
+
+    var row3 = document.createElement('div');
+    var property3 = document.createElement('span');
+    var value3 = document.createElement('span');
+    property3.id = "property";
+    property3.innerHTML = "Email: ";
+    value3.innerHTML = "{{user.email}}";
+
+    info.appendChild(row3);
+    row3.appendChild(property3);
+    row3.appendChild(value3);
+
+    var row4 = document.createElement('div');
+    var property4 = document.createElement('span');
+    var value4 = document.createElement('span');
+    property4.id = "property";
+    property4.innerHTML = "Phone Number: ";
+    value4.innerHTML = "{{user.phone}}";
+
+    info.appendChild(row4);
+    row4.appendChild(property4);
+    row4.appendChild(value4);
+
+    var row5 = document.createElement('div');
+    var property5 = document.createElement('span');
+    var value5 = document.createElement('span');
+    property5.id = "property";
+    property5.innerHTML = "Address: ";
+    value5.innerHTML = "{{user.address}}";
+
+    info.appendChild(row5);
+    row5.appendChild(property5);
+    row5.appendChild(value5);
+
+    var row6 = document.createElement('div');
+    var property6 = document.createElement('span');
+    var value6 = document.createElement('span');
+    property6.id = "property";
+    property6.innerHTML = "Postal Code: ";
+    value6.innerHTML = "{{user.postal}}";
+
+    info.appendChild(row6);
+    row6.appendChild(property6);
+    row6.appendChild(value6);
+
+  }
+</script>
+
+</html>

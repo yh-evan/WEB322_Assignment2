@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>C&C vacation rental online marketplace</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style-footer.css">
+  <link rel="stylesheet" type="text/css" media="screen and (max-width: 1200px)" href="./css/style-mobile.css" />
+  <link rel="stylesheet" type="text/css" media="screen and (max-width: 1200px)" href="./css/style-footer-mobile.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8089f34b28.js" crossorigin="anonymous"></script>
+  <script src="./js/validation.js"></script>
+  <style>
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+    }
+  </style>
+
+
+</head>
+{{#if errorMsg}}
+<body onload="open_login()">
+{{else}}
+<body>
+{{/if}}
+
+  <div id="loginbg"></div>
+  <div id="login" style="display:none;">
+    <h2>
+      <input id="close_login" type="button" title="close" value="x" onClick="close_login()" />
+    </h2>
+    <h1>Log In</h1>
+    <ul>
+      <form id="LoginForm" action="/login-Home" method="POST" enctype="multipart/form-data" onsubmit="return validateUser() && validatePs()" >
+        <li>
+          <label id="logtype" for="username">Username:</label>
+         
+            <input id="username" name="uname" type="text" autocomplete="off"/>
+            <div id="label-user">- minimal 6 characters <br> - no special characters</div>
+            
+         
+        </li>
+        <li>
+          <label for="password">password:</label>
+          
+            <input id="password" name="pword" type="password" autocomplete="off"/>
+            <div id="label-pass">- minimal 6 characters <br> - at least one special characters<br> - at least one number</div>
+
+        
+        </li>
+    </ul>
+
+        <li>
+          <div>
+            <div class="server-error" onload="open_login()">{{errorMsg}}</div>
+          </div>
+        </li>
+        <li>
+          <div class="submit">
+            <input id="fnlogin" type="submit" value="Submit" />
+            <a href="./register_user.html">Sign In</a>
+          </div>
+        </li>
+      </form>
+
+  </div>
+  <header>
+    <div class="nav">
+      <div class="home"><a href="index.html"><img src="./img/logo.png" alt="logo"></a></div>
+      {{#if user}}
+       <div class="user" style="font-family:Arial, FontAwesome">
+        <a style="font-size: 1rem;" href="/dashboard.html">
+        <span style="font-family: Montserrat, sans-serif;">{{user.fname}}</span></a>
+      </div>
+      {{else}}
+      <div class="user" style="font-family:Arial, FontAwesome" onClick="open_login()">
+        <span>&#xf007</span>
+      </div>
+      {{/if}}
+      
+    </div>
+  </header>
+
+  <div class="main">
+
+
+    <div class="title">
+      <picture>
+        <source media="(max-width: 1400px)" srcset="./img/title-840w.jpg">
+        <img src="./img/title-img.jpg" alt="title"></img>
+      </picture>
+      <div class="float">
+        <img id="logo" src="./img/logo.png" alt="logo">
+        <p>
+          Find the perfect vacation rental<br></p>
+        <div class="search">
+          <form action="./list.html">
+            <input type="text" list="city" id="place" placeholder="&#xf3c5; Where would you like to go?"
+              style="font-family:Arial, FontAwesome">
+            <datalist id="city">
+              <option value="Toronto"></option>
+              <option value="Markham"></option>
+              <option value="North York"></option>
+              <option value="Scarborough"></option>
+            </datalist>
+            <input onfocus="(this.type='date')" onblur="(this.type='text')" name="arrive" id="arrive"
+              placeholder="&#xf271; Arrive" style="font-family:Arial, FontAwesome">
+            <input onfocus="(this.type='date')" onblur="(this.type='text')" name="depart" id="depart"
+              placeholder="&#xf272; Depart" style="font-family:Arial, FontAwesome">
+            <input type="text" name="guests" id="guests" placeholder="&#xf0c0; Guests"
+              style="font-family:Arial, FontAwesome">
+            <input id="title-sub" type="submit" value="&#xf002; search" style="font-family:Arial, FontAwesome">
+          </form>
+        </div>
+        </p>
+      </div>
+    </div>
+
+    <div class="separate">
+      <h1>Top-rated</h1>
+      <div class="sub_separate">
+        <p>Get inspired by our collection</p>
+      </div>
+    </div>
+
+    <div class="top-list">
+      <div id="top-container" onclick="window.location.href='./detail.html'">
+        <img src="./img/toprated01.jpg" alt="top1">
+        <div id="describe">
+          <br>
+          <span id="des-name">Rosehill Cottage - a jewel on the Lake<br></span>
+          <span id="des-room">Sleeps 13 · 6 Bedrooms · 3 Bathrooms<br></span>
+          <span id="des-price">C$ 311 avg/night</span>
+          <br>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>(26)
+        </div>
+      </div>
+      <div id="top-container" onclick="window.location.href='./detail.html'">
+        <img src="./img/toprated02.jpg" alt="top2">
+        <div id="describe">
+          <br>
+
+          <span id="des-name">6 bdrm Chalet at Blue Mountains<br></span>
+          <span id="des-room">Sleeps 16 · 6 Bedrooms · 4 Bathrooms<br></span>
+          <span id="des-price">C$ 554 avg/night</span><br>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>(30)
+        </div>
+      </div>
+      <div id="top-container" onclick="window.location.href='./detail.html'">
+        <img src="./img/toprated03.jpg" alt="top3">
+        <div id="describe">
+          <br>
+          <span id="des-name">Brand New 8 Bedroom Luxury Chalet<br></span>
+          <span id="des-room">Sleeps 13 · 8 Bedrooms · 3 Bathrooms<br></span>
+          <span id="des-price">C$ 411 avg/night</span><br>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>(43)
+        </div>
+      </div>
+      <div id="top-container" onclick="window.location.href='./detail.html'">
+        <img src="./img/toprated04.jpg" alt="top4">
+        <div id="describe">
+          <br>
+          <span id="des-name">Blue Mountain Large Chalet - Blue Mountains<br></span>
+          <span id="des-room">Sleeps 10 · 4 Bedrooms · 2 Bathrooms<br></span>
+          <span id="des-price">C$ 465 avg/night</span><br>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>(25)
+        </div>
+      </div>
+
+    </div>
+
+    <div class="separate">
+      <h1>inspiration</h1>
+      <div class="sub_separate">
+        <p>Recommended destinations</p>
+      </div>
+    </div>
+
+    <div class="category">
+      <div class="category-list">
+        <div class="category-list-detail">
+          <div class="imgContainer">
+            <img src="./img/canmore.jpg" alt="Canmore">
+          </div>
+          <div class="category-list-text">
+            <div class="category-list-text-container">
+              <a href="./list.html">
+                <h4>Canmore</h4>
+                <p>Canmore is a town in Alberta’s Rocky Mountains, west of Calgary. It’s known for craggy summits like
+                  the Three Sisters and Ha Ling Peak. In nearby Canmore Nordic Centre Provincial Park, the Grassi Lakes
+                  Trail weaves past a waterfall to 2 turquoise blue lakes. The park also features cross-country ski and
+                  mountain-bike trails. East, Grotto Canyon’s steep limestone walls flank a narrow creek bed leading to
+                  a cave.</p>
+                <span>DISCOVER MORE</span>
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="category">
+      <div class="category-list">
+        <div class="category-list-detail">
+          <div class="imgContainer-reverse">
+            <img src="./img/Banff.jpg" alt="Banff">
+          </div>
+          <div class="category-list-text">
+            <div class="category-list-text-container">
+              <a href="#">
+                <h4>Banff</h4>
+                <p>Banff is a resort town in the province of Alberta, located within Banff National Park. The peaks of
+                  Mt. Rundle and Mt. Cascade, part of the Rocky Mountains, dominate its skyline. On Banff Avenue, the
+                  main thoroughfare, boutiques and restaurants mix with château-style hotels and souvenir shops. The
+                  surrounding 6,500 square kilometres of parkland are home to wildlife including elk and grizzly bears.
+                </p>
+                <span>DISCOVER MORE</span>
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="category">
+      <div class="category-list">
+        <div class="category-list-detail">
+          <div class="imgContainer">
+            <img src="./img/Kelowna.jpg" alt="Kelowna">
+          </div>
+          <div class="category-list-text">
+            <div class="category-list-text-container">
+              <a href="#">
+                <h4>Kelowna</h4>
+                <p>Kelowna is a city in the south of Canada’s British Columbia province. It’s in the Okanagan Valley, on
+                  the eastern shore of Okanagan Lake, surrounded by provincial parks, pine forest, vineyards, orchards
+                  and mountains. Its downtown area incorporates waterfront City Park and a lakeside cultural district.
+                  More than 20 local vineyards offer wine tours and tastings.</p>
+                <span>DISCOVER MORE</span>
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="category">
+    <div class="category-list">
+      <div class="category-list-detail">
+        <div class="imgContainer-reverse">
+          <img src="./img/Sandpoint.jpg" alt="Sandpoint">
+        </div>
+        <div class="category-list-text">
+          <div class="category-list-text-container">
+            <a href="#">
+              <h4>Sandpoint</h4>
+              <p>Sand Point is a community in the township of McNab/Braeside, Ontario, Canada, along the Ottawa River,
+                roughly six miles to the west of Arnprior on the River Road. During the 1860s and early 1870s it was the
+                terminus of the Canada Central Railway.
+                - DRAYMOND GREEN</p>
+              <span>DISCOVER MORE</span>
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  {{> footer}}
+
+  <script>
+    
+    function open_login() {
+      document.getElementById('loginbg').style.display = 'block';
+      document.getElementById('login').style.display = 'block';
+      showloginbg();
+    }
+
+    function close_login() {
+      document.getElementById('loginbg').style.display = 'none';
+      document.getElementById('login').style.display = 'none';
+    }
+
+    function showloginbg() {
+      var sWidth, sHeight;
+      sWidth = screen.width;
+      sWidth = document.body.offsetWidth;
+      sHeight = document.body.offsetHeight;
+      if (sHeight < screen.height) {
+        sHeight = screen.height;
+      }
+      document.getElementById("loginbg").style.width = sWidth + "px";
+      document.getElementById("loginbg").style.height = sHeight + "px";
+      document.getElementById("loginbg").style.display = "block";
+      document.getElementById("loginbg").style.display = "block";
+      document.getElementById("loginbg").style.right = document.getElementById("login").offsetLeft + "px";
+    }
+
+    function logo_in() {
+      close_login();
+    };
+    
+  </script>
+</body>
+
+</html>

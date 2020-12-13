@@ -1,0 +1,145 @@
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #e7e6e3;
+    border-bottom: solid 1px #f1f1f1;
+    border-top: solid 1px #f1f1f1;
+  }
+  
+  .footer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: 0;
+    margin-right: auto;
+    padding: 0;
+    padding-bottom: 20px;
+    font-family: "Red Rose", cursive;
+    height: 290px;
+    justify-content: space-around;
+  
+  }
+  
+  footer p {
+    font-size: 18px;
+  
+  }
+  
+  footer ul {
+    font-size: 0.8em;
+    padding: 0;
+    line-height: 30px;
+  }
+  
+  .f_header {
+    flex: .2;
+    align-self: center;
+  }
+  
+  .f_header #logo {
+    width: 240px;
+  }
+  
+  .f_cCare,
+  .f_policie,
+  .f_company {
+    text-align: left;
+  }
+  
+  .post{
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+  }
+  
+  .post img{
+    height: 20%;
+  }
+  
+  #post-sub{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    margin: 20px;
+  }
+  
+  #post-sub p{
+    color: rgb(172, 171, 171);
+    font-size: 0.84rem;
+  }
+  
+  #post-sub a{
+    margin-top: 30px;
+    border: solid 1px black;
+    width: max-content;
+    padding: 10px;
+    align-self: center;
+    border-radius: 20px;
+    transition: all 0.6s;
+  }
+  
+  #post-sub a:hover{
+    background-color: black;
+    color: white;
+  }
+  
+  
+  
+  #sub-email{
+    width: 150px;
+    align-self: center;
+    background: none;
+    border: none;
+    border-bottom: solid 1px rgb(172, 171, 171);
+    outline: none;
+  }
+  #sub-email:focus{
+    color: black;
+    border-color: black;
+  }
+  
+  
+  #sub{
+    margin-top: 20px;
+    width: 90px;
+    text-align: center;
+    text-transform: uppercase;
+    align-self: center;
+    background: none;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all 0.6s;
+  }
+  
+  #sub:hover{
+    transform: scale(1.2);
+  
+  }
+  
+  .link {
+    flex-basis: 100%;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+  
+  }
+  
+  .link input {
+    width: 20px;
+    margin-left: 20px;
+    margin-left: 20px;
+    
+  }
+  
+  .copyright p{
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    margin: 0;
+  }

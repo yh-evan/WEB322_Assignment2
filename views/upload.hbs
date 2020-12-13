@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Add room</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style-products.css" />
+    <link rel="stylesheet" href="./css/style-register.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:1200px)"
+        href="./css/style-registe-mobile.css" />
+    <script src="./js/validation.js"></script>
+</head>
+
+<body>
+    <img id="logo" src="./img/logo.png" alt="logo">
+
+    <div class="main">
+        <div class="separate">
+            <h1>new room</h1>
+            <div class="sub_separate">
+                <p>Please provide the information</p>
+            </div>
+        </div>
+
+        <div class="reg-form">
+            <form action="/addRoom" method="POST" enctype="multipart/form-data" onsubmit="return validateEmail() && validatePostal();">
+                <fieldset>
+                    <div id="name">
+                        <label for="fname">Room ID:</label>
+                        <input id="fname" type="text" name="_id">
+                    </div>
+                    <div id="name">
+                        <label for="fname">Title:</label>
+                        <input id="fname" type="text" name="title">
+                    </div>
+                    <div id="name">
+                        <label for="lname">Price/night:</label>
+                        <input id="lname" type="number" name="price" min="1" >
+                    </div>
+                    <div id="name">
+                        <label for="lname">Bedrooms(1-5):</label>
+                        <input id="lname" type="number" name="bedroom" min="1" max="5">
+                    </div>
+                     <div id="name">
+                        <label for="lname">Sleeps(1-50):</label>
+                        <input id="lname" type="number" name="sleeps" min="1" max="50">
+                    </div>
+                     <div id="name">
+                        <label for="lname">Bathrooms(1-5):</label>
+                        <input id="lname" type="number" name="bathroom" min="1" max="5">
+                    </div>
+                    <div id="Email">
+                        <label id="email" for="email">Email:</label>
+                        <input type="email" name="email" placeholder="xxx@xxx.xxx">
+                    </div>
+                    <div id="phone">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" placeholder="xxx-xxx-xxxx">
+                    </div>
+                    <div id="postalcode">
+                        <label for="postal">Postal Code</label>
+                        <input id="postal" type="text" name="postal" onblur="validatePostal()">
+                        <div id="label2">Please enter a valid Canadian Postal Code.</div>
+                    </div>
+                    <div id="address">
+                        <label for="address">Address</label>
+                        <input type="text" name="address">
+                    </div>
+                    <div id="city">
+                        <label for="city">City</label>
+                        <input type="text" list="cityname" placeholder="choose the city">
+                        <datalist id="cityname">
+                            <option value="Toronto"></option>
+                            <option value="Markham"></option>
+                            <option value="North York"></option>
+                            <option value="Scarborough"></option>
+                        </datalist>
+                    </div>
+                    <div id="type">
+                        <label for="type">Type:</label>
+                        <input type="radio" name="type" value="condo"> <span>&nbsp;&nbsp;Condo&nbsp;&nbsp;</span>
+                        <input type="radio" name="type" value="house"> <span>&nbsp;&nbsp;House&nbsp;&nbsp;</span>
+                        <input type="radio" name="type" value="hotel" id="desHidde"> <span>&nbsp;&nbsp;Hotel&nbsp;&nbsp;</span>
+                    </div>
+                    <div id="des">
+                        <label for="des">Description</label>
+                        <input type="text" name="des">
+                    </div>
+                    <div class="upload-form">
+                        <label for="upload">Thumbnail:</label>
+                        <input type="file" id="upload" name="thumbnail" />
+                    </di>
+                    <div id="moreComment">
+                        <textarea name="moreComment" id="mComment" cols="30" rows="10"
+                            placeholder="anything your want say"></textarea>
+                    </div>
+                    <div class="button">
+                        <input id="subform" type="submit" value="Submit">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <br>
+
+        <div class="back">
+            <a href="./index.html">Take me to the home page</a>
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+        <p>Copyright © 2020 WEB322. YuhuanZhou</p>
+    </div>
+
+
+</body>
+
+</html>

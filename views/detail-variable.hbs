@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style-detail.css">
+    <link rel="stylesheet" href="./css/style-footer.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 1200px)"
+        href="./css/style-detail-mobile.css" />
+    <script src="https://kit.fontawesome.com/8089f34b28.js" crossorigin="anonymous"></script>
+    <style>
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+        }
+    </style>
+
+    <title>Detail of rental</title>
+</head>
+
+<body>
+    {{> header}}
+    <div class="content">
+
+        <div class="left">
+            <div class="photo-container">
+                <div class="photo-grid">
+                    <div class="photo-hero">
+                        <img src="./img/hero.jpg" alt="hero">
+                    </div>
+                    <div class="photo-photos">
+                        <div class="photo-secondary">
+                            <img src="./img/secondary.jpg" alt="secondary">
+                        </div>
+                        <div class="photo-tertiary">
+                            <div id="tertiary-container">
+                                <img src="./img/tertiary.jpg" alt="tertiary01">
+                            </div>
+                            <div id="tertiary-container">
+                                <img src="./img/tertiary2.jpg" alt="tertiary02">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+
+                <div class="list">
+                    <p class="title">{{room.title}}</p>
+
+                    <div class="list-container">
+                        <div class="list-detail">
+                            <p><i class="fas fa-home"></i> {{room.type}}</p>
+                            <p><i class="fas fa-users"></i> Sleeps: {{room.sleeps}}</p>
+                            <p><i class="fas fa-bed"></i> Bedrooms: {{room.bedroom}}</p>
+                            <p><i class="fas fa-bath"></i> Bathrooms: {{room.bathroom}}</p>
+                        </div>
+                        <div class="map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.1755906558988!2d-79.39137458400492!3d43.64451497912165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3599f23d8d15%3A0xffc894ed47efdbbd!2sLife%20Suites%20Loft%20-%20CN%20Tower%20%2F%20MTCC%20%2F%20Scotibank%20Arena!5e0!3m2!1sen!2sca!4v1602168812729!5m2!1sen!2sca"
+                                width="600" height="250" frameborder="0" style="border:0;" allowfullscreen=""
+                                aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="description">
+                        <p>{{room.moreComment}}</p>
+                    </div>
+
+                    <div class="beds-list">
+                        <h2>Beds</h2>
+                        <div class="bed">
+                            <div class="bed-img-container">
+                                <img src="./img/bed1.jpg" alt="">
+                                <div class="size">
+                                    <h3>Master</h3>
+                                    <p>Size: queen</p>
+                                    <span>full size bedroom with queen size bed and closet. </span>
+                                </div>
+                            </div>
+                            <div class="bed-img-container">
+                                <img src="./img/bed2.jpg" alt="">
+                                <div class="size">
+                                    <h3>2nd Bed</h3>
+                                    <p>Size: queen</p>
+                                    <span>full size bedroom with queen size bed and closet. </span>
+                                </div>
+                            </div>
+                            <div class="bed-img-container">
+                                <img src="./img/bed3.jpg" alt="">
+                                <div class="size">
+                                    <h3>Living room</h3>
+                                    <p>Size: sleep sofa/futon</p>
+                                    <span>Sofa bed located in the living room with pillows and linens. </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="general">
+                        <h2>General</h2>
+                        <div class="general-list">
+                            <div id="column1">
+                                <p>Air Conditioning</p>
+                                <p>Heating</p>
+                                <p>Lines Provided</p>
+                                <p>Washing Machine</p>
+                                <p>Clothes Dryer</p>
+                                <p>Parking</p>
+                            </div>
+                            <div id="column2">
+                                <p>Garage</p>
+                                <p>Internet</p>
+                                <p>Towels Provided</p>
+                                <p>Fitness Room/Equipment</p>
+                                <p>Wireless Internet</p>
+                                <p>Iron & Board</p>
+                            </div>
+                            <div id="column3">
+                                <p>Hair Dryer</p>
+                                <p>Paper Towels</p>
+                                <p>Shampoo</p>
+                                <p>Elevator</p>
+                                <p>Living Room</p>
+                                <p>Gym</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="payment">
+                <div class="price">
+                    <p>C$ <span id="room-price">{{room.price}}</span><span>/night</span></p>
+                </div>
+
+                <form class="time" action="/booking{{room._id}}" method="POST" enctype="multipart/form-data">
+                    <div id="time-select">
+                        <input onfocus="(this.type='date')" onblur="(this.type='text')" name="checkin" id="checkin"
+                            placeholder="&nbsp;&nbsp;&nbsp;&#xf271; Check In" style="font-family:Arial, FontAwesome">
+                        <input onfocus="(this.type='date')" onblur="(this.type='text')" name="checkout" id="checkout"
+                            placeholder="&nbsp;&nbsp;&nbsp;&#xf272; Check Out" style="font-family:Arial, FontAwesome">
+                    </div>
+                    <div id="button">
+                        <input id="apply" onclick="calculate()" type="button" value="Calculate">
+                        <input id="rest" onclick="calculate()" type="reset" value="Rest">
+                    </div>
+
+                    <div class="total">
+                        <p>Total Price: </p>
+                        <p id="price"></p>
+
+                    </div>
+
+                    <div class="book">
+                        <input type="submit" value="Book">
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    {{> footer}}
+
+    <script>
+        document.querySelector("#price").innerHTML = "Please select the date.";
+
+        function calculate() {
+            var price = document.getElementById("room-price").innerHTML;
+            var checkIn = document.getElementById("checkin").value;
+            var checkOut = document.getElementById("checkout").value;
+            var Difference_In_Time = new Date(checkOut) - new Date(checkIn);
+            var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+            if (new Date(checkOut) > 1) {
+                document.querySelector("#price").innerHTML = "C$ " + parseInt(price) * Difference_In_Days
+                    + "<br><br>" + "Tax:" + "<br><br>" + "C$ " + (parseInt(price) * Difference_In_Days * 0.13).toFixed(2);
+            } else {
+                document.querySelector("#price").innerHTML = "Please select the date.";
+            }
+        }
+
+        var Float = document.querySelector('.payment');
+        var footer = document.querySelector('.footer-container');
+
+        function checkOffset() {
+            function getRectTop(el) {
+                var rect = el.getBoundingClientRect();
+                return rect.top;
+            }
+
+            if (((getRectTop(Float) + document.body.scrollTop) + Float.offsetHeight >= (getRectTop(footer) +
+                document.body.scrollTop) - 10)) {
+                Float.style.position = 'absolute';
+                Float.style.bottom = '60px';
+            }
+            if (document.body.scrollTop + window.innerHeight < (getRectTop(footer) + document.body.scrollTop)) {
+                Float.style.position = 'fixed';
+                Float.style.removeProperty('bottom');
+            }
+
+        }
+
+        function sizeChange() {
+            var offsetWidth = document.documentElement.clientWidth;
+            return offsetWidth;
+        }
+
+        if (sizeChange() > 1200) {
+            document.addEventListener("scroll", function () {
+                checkOffset();
+            });
+        }
+    </script>
+
+</body>
+
+</html>
